@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="S4L69AppWheather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sylwia-bartyzel-112721.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="AfO-GD-Ezm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the Weather?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kR-kO-WHJ">
+                                <rect key="frame" x="70.5" y="20" width="234" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your city:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2L6-Nd-SLK">
+                                <rect key="frame" x="138.5" y="68" width="98" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Eg. Novi Sad, Belgrade, Zrenjanin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EVf-9q-mHL">
+                                <rect key="frame" x="16" y="107" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="NVi-rX-Nvu"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHK-Ed-bGA">
+                                <rect key="frame" x="163" y="152" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOd-tJ-Q1q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-0V-WqA">
+                                <rect key="frame" x="16" y="206" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EVf-9q-mHL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="44v-c8-F8p"/>
+                            <constraint firstItem="AfO-GD-Ezm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Agq-IR-Koc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EVf-9q-mHL" secondAttribute="trailing" constant="16" id="FXH-tR-Xv3"/>
+                            <constraint firstItem="2eh-0V-WqA" firstAttribute="top" secondItem="UHK-Ed-bGA" secondAttribute="bottom" constant="24" id="JWU-kB-c7F"/>
+                            <constraint firstItem="7kR-kO-WHJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KZD-hH-cEp"/>
+                            <constraint firstItem="AfO-GD-Ezm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="MDL-Tv-rZh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2eh-0V-WqA" secondAttribute="trailing" constant="16" id="MFS-aE-MR2"/>
+                            <constraint firstItem="2eh-0V-WqA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MNh-qp-hnY"/>
+                            <constraint firstItem="UHK-Ed-bGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UX8-KZ-FVI"/>
+                            <constraint firstItem="2L6-Nd-SLK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wou-pl-udt"/>
+                            <constraint firstItem="7kR-kO-WHJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bZb-mH-IoE"/>
+                            <constraint firstItem="EVf-9q-mHL" firstAttribute="top" secondItem="2L6-Nd-SLK" secondAttribute="bottom" constant="22" id="bxn-nM-usw"/>
+                            <constraint firstItem="AfO-GD-Ezm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dEX-Ul-5Pg"/>
+                            <constraint firstItem="AfO-GD-Ezm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iuc-5g-GJs"/>
+                            <constraint firstItem="EVf-9q-mHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jG1-PV-TCl"/>
+                            <constraint firstItem="UHK-Ed-bGA" firstAttribute="top" secondItem="EVf-9q-mHL" secondAttribute="bottom" constant="15" id="m2c-BJ-HZn"/>
+                            <constraint firstItem="2eh-0V-WqA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r8q-Sr-TNi"/>
+                            <constraint firstItem="2L6-Nd-SLK" firstAttribute="top" secondItem="7kR-kO-WHJ" secondAttribute="bottom" constant="16" id="wMu-vn-d3C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="EVf-9q-mHL" id="m2t-WX-8eP"/>
+                        <outlet property="weatherLabel" destination="2eh-0V-WqA" id="jGA-zg-zjX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sylwia-bartyzel-112721.jpg" width="4928" height="3264"/>
+    </resources>
+</document>
